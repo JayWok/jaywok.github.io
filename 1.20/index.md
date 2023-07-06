@@ -52,8 +52,8 @@ For development, it's nice to have JEI and TOP available. To do that you can cha
 
 ```java
 repositories {
-// Put repositories for dependencies here
-// ForgeGradle automatically adds the Forge maven and Maven Central for you
+    // Put repositories for dependencies here
+    // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
     maven { // JEI
         url "https://maven.blamejared.com"
@@ -71,9 +71,9 @@ Then change `dependencies` to this:
 
 ```java
 dependencies {
-// Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
-// that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
-// The userdev artifact is a special name and will get all sorts of transformations applied to it.
+    // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
+    // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
+    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
 minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
@@ -100,8 +100,6 @@ Make sure that you're using Java 17!{: .warning }
 [image](https://i.imgur.com/ktUCq7P.png)
 
 **You are now ready to move on to the next part of the tutorial!**
-
-[Episode 1](/ep1.html){: .btn .btn-purple }
 
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
