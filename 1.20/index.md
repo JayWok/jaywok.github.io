@@ -14,6 +14,7 @@ has_children: true
 This section is all about setting up your IDE and workspace in order to get into modding.
 
 **All credit goes to McJty for this setup page**
+
 **Make sure to check him out here:** [McJty](https://mcjty.eu/)
 
 To start your own mod the easiest way is to download the latest Forge MDK from [the Forge download site](https://files.minecraftforge.net/net/minecraftforge/forge/) and extract it to some temporary folder. Then make a new directory for your own mod and copy over the following files from the MDK:
@@ -47,7 +48,8 @@ Minecraft is distributed in an obfuscated manner. That means that all names of m
 
 For development, it's nice to have JEI and TOP available. To do that you can change the following in your `build.gradle`. First change the `repositories` like this:
 
-`build.gradle
+**build.gradle**
+`
 repositories {
 // Put repositories for dependencies here
 // ForgeGradle automatically adds the Forge maven and Maven Central for you
