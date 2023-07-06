@@ -1,5 +1,5 @@
 ---
-title: "1.20"
+title: 1.20 Modding
 layout: home
 nav_order: 1
 has_children: true

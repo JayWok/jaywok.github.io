@@ -1,7 +1,7 @@
 ---
 title: 1.20 Episode 1
 layout: default
-parent: 1.20
+parent: 1.20 Modding
 nav_order: 0
 ---
 
