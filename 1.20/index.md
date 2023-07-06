@@ -29,10 +29,9 @@ To start your own mod the easiest way is to download the latest Forge MDK from [
 
 Then open `build.gradle` in your IDE (IntelliJ for example) as a project(!). Make sure to set the Java to JDK 17!
 
-You probably want to change your modid. This should be a lowercase identifier containing only characters, digits and possibly an underscore. These are the places where you have to change the modid:
+You probably want to change your modid. This should be a lowercase identifier containing only characters, digits and possibly an underscore. **I will be using tutorialmod** These are the places where you have to change the modid:
 
 - `gradle.properties`
-- The main mod file. In the MDK that's called 'ExampleMod' but you can rename it to a better name. Also, probably rename the package
 
 ## gradle.properties
 
@@ -73,10 +72,12 @@ Then change `dependencies` to this:
 
 ```java
 dependencies {
-    // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
+    // Specify the version of Minecraft to use.
+    // Any artifact can be supplied so long as it has a "userdev" classifier artifact and is a compatible patcher artifact.
+    // The "userdev" classifier will be requested and setup by ForgeGradle.
+    // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
+    // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -87,7 +88,6 @@ minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
     implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
             transitive = false
     })
-
 }
 ```
 
