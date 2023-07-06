@@ -2,6 +2,7 @@ title: JayWok
 description: Minecraft Forge Modding
 theme: just-the-docs
 
+favicon_ico: "/assets/images/favicon.ico"
 url: https://jaywok.github.io/
 
 aux_links:
