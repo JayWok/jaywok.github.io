@@ -8,6 +8,8 @@ nav_order: 0
 
 #### I hope you enjoy your stay
 
+---
+
 I wanted to create a **simple** and **easy** way to learn how to make Minecraft mods.
 
 ---
