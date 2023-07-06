@@ -1,11 +1,11 @@
 ---
 title: 1.20 Episode 1
 layout: default
-parent: 1.20 Home
+parent: 1.20
 nav_order: 0
 ---
 
-## 1.20 Episode 1
+## 1.20 Modding Episode 1
 
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
