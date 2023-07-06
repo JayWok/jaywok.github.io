@@ -47,10 +47,10 @@ Minecraft is distributed in an obfuscated manner. That means that all names of m
 
 For development, it's nice to have JEI and TOP available. To do that you can change the following in your `build.gradle`. First change the `repositories` like this:
 
-```build.gradle
+`build.gradle
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
+// Put repositories for dependencies here
+// ForgeGradle automatically adds the Forge maven and Maven Central for you
 
     maven { // JEI
         url "https://maven.blamejared.com"
@@ -58,8 +58,9 @@ repositories {
     maven { // TOP
         url "https://maven.k-4u.nl"
     }
+
 }
-```
+`
 
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
