@@ -9,6 +9,8 @@ has_children: true
 
 ---
 
+You can view the GitHub for this tutorial project [here](https://github.com/JayWok/jaywok-tutorial-1.20)
+
 ## Setup
 
 This section is all about setting up your IDE and workspace in order to get into modding.
