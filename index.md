@@ -20,6 +20,6 @@ My goal is to let you go at your own speed and to break things down & explain ex
 
 ### Jump In!
 
-1.20 Modding: [1.20]
+1.20 Modding: [1.20]{: .btn .btn-purple }
 
-[1.20]: /1.20/index.md
+[1.20]: /1.20
