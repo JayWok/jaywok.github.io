@@ -64,6 +64,43 @@ repositories {
 }
 `
 
+Then change `dependencies` to this:
+
+**build.gradle**
+`
+dependencies {
+// Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
+// that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
+// The userdev artifact is a special name and will get all sorts of transformations applied to it.
+minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
+
+    // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
+    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+
+    implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
+            transitive = false
+    })
+
+}
+`
+
+After making all these changes you need to refresh gradle ('gradle' tab on the top right)
+
+## Generating the runs
+
+To be able to run Minecraft from within IntelliJ you can also need to run the 'genIntellijRuns' task (also in the gradle tab). This will generate 'runClient', 'runServer', and 'runData' targets. For now, we'll use 'runClient' mostly. Try it out and if all went well you should see Minecraft If this was successful you should see something like this:
+
+Make sure that you're using Java 17!{: .warning }
+
+[image](https://i.imgur.com/ktUCq7P.png)
+
+**You are now ready to move on to the next part of the tutorial!**
+
+[Episode 1](/ep1.html){: .btn .btn-purple }
+
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
