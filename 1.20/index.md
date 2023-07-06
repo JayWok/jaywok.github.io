@@ -49,7 +49,8 @@ Minecraft is distributed in an obfuscated manner. That means that all names of m
 For development, it's nice to have JEI and TOP available. To do that you can change the following in your `build.gradle`. First change the `repositories` like this:
 
 **build.gradle**
-`
+
+```java
 repositories {
 // Put repositories for dependencies here
 // ForgeGradle automatically adds the Forge maven and Maven Central for you
@@ -62,12 +63,13 @@ repositories {
     }
 
 }
-`
+```
 
 Then change `dependencies` to this:
 
 **build.gradle**
-`
+
+```java
 dependencies {
 // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
 // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
@@ -85,7 +87,7 @@ minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
     })
 
 }
-`
+```
 
 After making all these changes you need to refresh gradle ('gradle' tab on the top right)
 
