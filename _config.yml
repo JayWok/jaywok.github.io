@@ -1,6 +1,7 @@
 title: JayWok
 description: Minecraft Forge Modding
 theme: just-the-docs
+color_scheme: dark
 
 favicon_ico: "/assets/images/favicon.ico"
 url: https://jaywok.github.io/
