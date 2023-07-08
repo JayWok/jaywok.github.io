@@ -99,7 +99,7 @@ To be able to run Minecraft from within IntelliJ you can also need to run the 'g
 
 Make sure that you're using Java 17!{: .warning }
 
-[image](https://i.imgur.com/ktUCq7P.png)
+![runClient](/assets/images/runClient.png)
 
 **You are now ready to move on to the next part of the tutorial!**
 
