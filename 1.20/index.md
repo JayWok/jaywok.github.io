@@ -97,7 +97,7 @@ After making all these changes you need to refresh gradle ('gradle' tab on the t
 
 To be able to run Minecraft from within IntelliJ you can also need to run the 'genIntellijRuns' task (also in the gradle tab). This will generate 'runClient', 'runServer', and 'runData' targets. For now, we'll use 'runClient' mostly. Try it out and if all went well you should see Minecraft If this was successful you should see something like this:
 
-Make sure that you're using Java 17!{: .warning }
+{: .warning } Make sure that you're using Java 17!
 
 ![runClient](/assets/images/runClient.png)
 
