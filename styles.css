@@ -36,8 +36,9 @@ footer {
   text-align: center;
   padding: 10px;
   position: fixed;
-  width: 100%;
+  width: calc(100% - 20px);
   bottom: 0;
+  left: 10px;
 }
 
 /* Responsive styles */
@@ -49,9 +50,15 @@ footer {
   main {
     display: flex;
     justify-content: space-between;
+    gap: 20px; /* Optional: to add space between sections */
   }
 
   section {
-    width: 48%;
+    width: calc(50% - 10px); /* Ensure sections fit within the main area */
+  }
+
+  footer {
+    width: calc(100% - 40px);
+    left: 20px;
   }
 }
