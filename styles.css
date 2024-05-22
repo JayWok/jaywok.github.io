@@ -8,30 +8,61 @@
 /* Base styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #ffffff;
   line-height: 1.6;
   padding: 0 10px 40px; /* Add bottom padding to prevent footer overlap */
-}
-
-header {
-  background-color: #1e1e1e;
-  padding: 20px;
-  text-align: center;
 }
 
 main {
   margin: 20px 0;
 }
 
+/* Light mode */
+body {
+  background-color: #494949;
+  color: #121212;
+}
 section {
+  background-color: #c9c9c9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+header {
+  background-color: #c9c9c9;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
+
+footer {
+  background-color: #c9c9c9;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: calc(100% - 20px);
+  bottom: 0;
+  left: 10px;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+section.dark-mode {
   background-color: #1e1e1e;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
+header.dark-mode {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
 
-footer {
+footer.dark-mode {
   background-color: #1e1e1e;
   text-align: center;
   padding: 10px;
