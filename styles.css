@@ -1,3 +1,20 @@
+/* Define color variables */
+:root {
+  --background-light: #f0f0f0;
+  --text-light: #333333;
+  --section-background-light: #ffffff;
+  --header-footer-background-light: #6200ea;
+  --header-footer-text-light: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+
+  --background-dark: #121212;
+  --text-dark: #e0e0e0;
+  --section-background-dark: #1f1f1f;
+  --header-footer-background-dark: #bb86fc;
+  --header-footer-text-dark: #121212;
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
 /* Reset some default browser styles */
 * {
   margin: 0;
@@ -10,72 +27,77 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 0 10px 40px; /* Add bottom padding to prevent footer overlap */
+  background-color: var(--background-light);
+  color: var(--text-light);
 }
 
 main {
   margin: 20px 0;
 }
 
-/* Light mode */
-body {
-  background-color: #494949;
-  color: #121212;
-}
 section {
-  background-color: #c9c9c9;
+  background-color: var(--section-background-light);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-light);
 }
+
 header {
-  background-color: #c9c9c9;
+  background-color: var(--header-footer-background-light);
+  color: var(--header-footer-text-light);
   padding: 20px;
   text-align: center;
   cursor: pointer; /* Add cursor pointer to indicate clickability */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-light);
 }
 
 footer {
-  background-color: #c9c9c9;
+  background-color: var(--header-footer-background-light);
+  color: var(--header-footer-text-light);
   text-align: center;
   padding: 10px;
   position: fixed;
   width: calc(100% - 20px);
   bottom: 0;
   left: 10px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -4px 6px var(--shadow-light);
 }
 
 /* Dark mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
+
 section.dark-mode {
-  background-color: #1e1e1e;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  background-color: var(--section-background-dark);
+  box-shadow: 0 4px 6px var(--shadow-dark);
 }
+
 header.dark-mode {
-  background-color: #1e1e1e;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer; /* Add cursor pointer to indicate clickability */
+  background-color: var(--header-footer-background-dark);
+  color: var(--header-footer-text-dark);
+  box-shadow: 0 4px 6px var(--shadow-dark);
 }
 
 footer.dark-mode {
-  background-color: #1e1e1e;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: calc(100% - 20px);
-  bottom: 0;
-  left: 10px;
+  background-color: var(--header-footer-background-dark);
+  color: var(--header-footer-text-dark);
+  box-shadow: 0 -4px 6px var(--shadow-dark);
 }
 
 /* Responsive styles */
 @media (min-width: 768px) {
   body {
     padding: 0 20px 40px; /* Add bottom padding to prevent footer overlap */
+  }
+
+  body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
   }
 
   main {
@@ -86,10 +108,26 @@ footer.dark-mode {
 
   section {
     width: calc(50% - 10px); /* Ensure sections fit within the main area */
+    background-color: var(--section-background-light);
+    box-shadow: 0 4px 6px var(--shadow-light);
+  }
+
+  section.dark-mode {
+    background-color: var(--section-background-dark);
+    box-shadow: 0 4px 6px var(--shadow-dark);
   }
 
   footer {
     width: calc(100% - 40px);
     left: 20px;
+    background-color: var(--header-footer-background-light);
+    color: var(--header-footer-text-light);
+    box-shadow: 0 -4px 6px var(--shadow-light);
+  }
+
+  footer.dark-mode {
+    background-color: var(--header-footer-background-dark);
+    color: var(--header-footer-text-dark);
+    box-shadow: 0 -4px 6px var(--shadow-dark);
   }
 }
