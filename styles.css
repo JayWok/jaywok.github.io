@@ -53,6 +53,30 @@ header {
   box-shadow: 0 4px 6px var(--shadow-light);
 }
 
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--header-footer-text-light);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff; /* Change color on hover */
+}
+
 footer {
   background-color: var(--header-footer-background-light);
   color: var(--header-footer-text-light);
@@ -81,6 +105,10 @@ header.dark-mode {
   background-color: var(--header-footer-background-dark);
   color: var(--header-footer-text-dark);
   box-shadow: 0 4px 6px var(--shadow-dark);
+}
+
+nav.dark-mode ul li a {
+  color: var(--header-footer-text-dark);
 }
 
 footer.dark-mode {
