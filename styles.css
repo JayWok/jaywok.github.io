@@ -26,7 +26,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  padding: 0 10px 40px; /* Add bottom padding to prevent footer overlap */
+  padding: 0 10px; /* Add bottom padding to prevent footer overlap */
   background-color: var(--background-light);
   color: var(--text-light);
 }
@@ -81,10 +81,6 @@ footer {
   color: var(--header-footer-text-light);
   text-align: center;
   padding: 10px;
-  position: fixed;
-  width: calc(100% - 20px);
-  bottom: 0;
-  left: 10px;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 -4px 6px var(--shadow-light);
 }
@@ -139,14 +135,17 @@ footer.dark-mode {
     box-shadow: 0 4px 6px var(--shadow-light);
   }
 
+  section:only-child {
+    width: 100%; /* Ensure single section stretches to full width */
+  }
+
   section.dark-mode {
     background-color: var(--section-background-dark);
     box-shadow: 0 4px 6px var(--shadow-dark);
   }
 
   footer {
-    width: calc(100% - 40px);
-    left: 20px;
+    width: auto; /* Reset width for responsive design */
     background-color: var(--header-footer-background-light);
     color: var(--header-footer-text-light);
     box-shadow: 0 -4px 6px var(--shadow-light);
